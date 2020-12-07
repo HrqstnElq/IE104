@@ -1,0 +1,18 @@
+:root {
+	--light-orange: #b61924;
+	--light-blue: #0798ec;
+	--light-pink: #c25867;
+}
+
+.nav {
+	.nav--main {
+		.nav-item + .nav-item {
+			margin-left: 2rem;
+		}
+		@media (max-width: 640px) {
+			.nav-item + .nav-item {
+				margin-left: 0;
+			}
+		}
+	}
+}

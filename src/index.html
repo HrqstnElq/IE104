@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>abc</title>
+		<link rel="stylesheet" href="./assets/lib/hamburger.css" />
+		<link rel="stylesheet" href="./assets/css/index.css" />
+		<link rel="stylesheet" href="./assets/css/common.css" />
+		<link rel="stylesheet" href="./assets/lib/fullpage.css" />
+	</head>
+	<body>
+		<header class="select-none z-50 w-full">
+			<nav class="nav container w-11/12 xl:w-5/6 m-auto mt-2 font-medium flex flex-col lg:flex-row justify-between">
+				<div class="flex flex-row justify-between">
+					<div class="nav--logo text-3xl cursor-pointer font-bold">Music</div>
+					<div id="hamburger" class="hamburger hamburger--arrow hamburger--accessible p-3 cursor-pointer lg:hidden">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</div>
+				<div class="nav--main hidden lg:block opacity-0 lg:opacity-100 transition">
+					<ul class="nav flex-col text-center lg:flex-row lg:flex">
+						<li class="nav-item py-2">
+							<a class="text-pink-500 hover:text-pink-500 cursor-pointer">Trang chủ</a>
+						</li>
+						<li class="nav-item py-2 hover:underline">
+							<a href="#" class="hover:text-pink-500">Bảng xếp hạng</a>
+						</li>
+						<li class="nav-item py-2 hover:underline">
+							<a href="#" class="hover:text-pink-500">Theo chủ đề</a>
+						</li>
+						<li class="nav-item py-2 hover:underline">
+							<a href="#" class="hover:text-pink-500">Theo ca sĩ</a>
+						</li>
+						<li class="nav-item py-2 hover:underline">
+							<a href="#" class="hover:text-pink-500">Liên hệ</a>
+						</li>
+						<li
+							class="nav-item py-2 px-4 bg-white hover:bg-gray-200 transition-colors duration-500 border border-gray-300 rounded-xl lg:mr-4"
+						>
+							<a href="./pages/login.html" class="hover:text-black">Đăng nhập</a>
+						</li>
+						<li
+							class="py-2 px-4 bg-pink-400 hover:bg-pink-600 border border-pink-700 transition-colors duration-500 text-white rounded-xl mt-4 lg:mt-0"
+						>
+							<a href="./pages/register.html" class="hover:text-white">Đăng kí</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<script src="./assets/js/index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../assets/lib/hamburger.css" />
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" href="../assets/css/common.css" />
+		<link rel="stylesheet" href="../assets/css/index.css" />
+		<link rel="stylesheet" href="../assets/css/lienhe.css" />
+		<title>About</title>
+	</head>
+	<body>
+		<header class="select-none w-full">
+			<nav class="nav container w-11/12 xl:w-5/6 m-auto mt-2 font-medium flex flex-col lg:flex-row justify-between">
+				<div class="flex flex-row justify-between">
+					<div class="nav--logo text-3xl cursor-pointer font-bold">Music</div>
+					<div id="hamburger" class="hamburger hamburger--arrow hamburger--accessible p-3 cursor-pointer lg:hidden">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</div>
+				<div class="nav--main hidden lg:block opacity-0 lg:opacity-100 transition">
+					<ul class="nav flex-col text-center lg:flex-row lg:flex">
+						<li class="nav-item py-2">
+							<a class="text-pink-500 hover:text-pink-500 cursor-pointer">Trang chủ</a>
+						</li>
+						<li class="nav-item py-2 hover:underline">
+							<a href="#" class="hover:text-pink-500">Bảng xếp hạng</a>
+						</li>
+						<li class="nav-item py-2 hover:underline">
+							<a href="#" class="hover:text-pink-500">Theo chủ đề</a>
+						</li>
+						<li class="nav-item py-2 hover:underline">
+							<a href="#" class="hover:text-pink-500">Theo ca sĩ</a>
+						</li>
+						<li class="nav-item py-2 hover:underline">
+							<a href="#" class="hover:text-pink-500">Liên hệ</a>
+						</li>
+						<li
+							class="nav-item py-2 px-4 bg-white hover:bg-gray-200 transition-colors duration-500 border border-gray-300 rounded-xl lg:mr-4"
+						>
+							<a href="./login.html" class="hover:text-black">Đăng nhập</a>
+						</li>
+						<li
+							class="py-2 px-4 bg-pink-400 hover:bg-pink-600 border border-pink-700 transition-colors duration-500 text-white rounded-xl mt-4 lg:mt-0"
+						>
+							<a href="./register.html" class="hover:text-white">Đăng kí</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<section class="content w-full select-none relative">
+			<div class="container w-11/12 xl:w-5/6 m-auto">
+				<div class="header mt-2 flex justify-between w-full h-full flex-col-reverse lg:flex-row">
+					<div data-aos="fade-right" class="sologan lg:w-2/5 flex justify-center mt-32">
+						<div class="slogan content">
+							<h1 class="text-2xl lg:text-5xl font-bold text-pink-500">The Heart of the Designer Community</h1>
+							<p class="text-lg lg:text-xl text-yellow-200 mt-3">
+								We’re on a mission to build the world’s best community for creatives to share, grow, and get hired.
+							</p>
+						</div>
+					</div>
+					<div data-aos="fade-left" class="banner w-full lg:w-3/5 flex justify-center items-center">
+						<img id="banner--image" class="block w-5/6 lg:w-auto lg:h-3/6" src="../assets/images/lienhe_banner.jpg" alt="banner" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="../assets/js/index.js"></script>
+		<script>
+			AOS.init({
+				disable: false,
+				startEvent: "DOMContentLoaded",
+				initClassName: "aos-init",
+				animatedClassName: "aos-animate",
+				useClassNames: false,
+				disableMutationObserver: false,
+				debounceDelay: 50,
+				throttleDelay: 99,
+
+				offset: 120,
+				delay: 500,
+				duration: 400,
+				easing: "ease",
+				once: false,
+				mirror: false,
+				anchorPlacement: "top-bottom",
+			});
+		</script>
+	</body>
+</html>

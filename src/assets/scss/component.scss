@@ -1,0 +1,41 @@
+:root {
+	--primary: #252627;
+	--secondary: #f7f7f7;
+}
+
+.switch {
+	position: relative;
+	cursor: pointer;
+	width: 6rem;
+	height: 2.5rem;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 100rem;
+	background-color: var(--secondary);
+	transition: background-color 0.25s linear;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 2rem;
+		height: 2rem;
+		border-radius: 2rem;
+		background-color: var(--primary);
+		top: 4px;
+		left: 4px;
+		transition: background-color 0.25s linear;
+		transition: transform 0.3s ease-in;
+	}
+}
+
+.switch-input {
+	display: none;
+	&:checked + .switch {
+		background-color: var(--primary);
+	}
+	&:checked + .switch:after {
+		transform: translateX(3.5rem);
+		background-color: var(--secondary);
+		transition: transform 0.3s ease-in-out;
+	}
+}
