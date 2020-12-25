@@ -1,3 +1,5 @@
+loadHomePage();
+
 function loadHomePage() {
 	$.ajax({
 		url: "./pages/home.html",
@@ -7,4 +9,11 @@ function loadHomePage() {
 	});
 }
 
-loadHomePage();
+function loadBXHpage() {
+	$.ajax({
+		url: "./pages/bxh.html",
+		success: function (result) {
+			$("#body").html(result);
+		},
+	});
+}
