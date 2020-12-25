@@ -546,6 +546,11 @@ video {
   height: auto;
 }
 
+input:focus, button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .container {
   width: 100%;
 }
@@ -31165,6 +31170,18 @@ video {
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.grid-auto-min-w-12 {
+  grid-template-columns: repeat(auto-fit, min(12.5rem, 100%));
+}
+
+.grid-auto-min-w-21 {
+  grid-template-columns: repeat(auto-fit, min(21rem, 100%));
 }
 
 @media (min-width: 640px) {
