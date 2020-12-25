@@ -2,5 +2,49 @@
 	#nav-trending {
 		color: #c0392b;
 	}
+	#nav-trending.dark-mode {
+		color: #a55eea;
+	}
+	input[type="checkbox"].heart:checked + i {
+		color: #ee5253;
+	}
 </style>
-<div>bxh</div>
+<div class="home-page container w-5/6 m-auto h-auto space-y-3 my-5">
+	<div class="lg:block hidden space-y-2 m-auto mt-4">
+		<h1 class="text-xl font-bold uppercase">Top 100</h1>
+		<p class="text-base">
+			TOP 100 là danh sách 100 ca khúc hot nhất hiện tại của từng thể loại nhạc, được hệ thống tự động đề xuất dựa trên thông tin số liệu lượt
+			nghe và lượt chia sẻ của từng bài hát trên cả desktop và mobile. Dữ liệu sẽ được lấy trong 30 ngày gần nhất và được cập nhật liên tục.
+		</p>
+	</div>
+	<div class="space-y-2 m-auto" id="content"></div>
+</div>
+<script>
+	loadContent();
+	function loadContent() {
+		$.getJSON("/src/data/top100.json", function (res) {
+			let html = "";
+			for (let i = 0; i < res.length; i++) {
+				html += `
+				<div class="award-music">
+					<h1 class="lg:pt-5 my-4 text-xl font-bold uppercase">${res[i].name}</h1>
+					<div id="awards" class="grid gap-4 grid-auto-min-w-12 justify-center lg:justify-between">
+				`;
+
+				for (let j = 0; j < res[i].data.length; j++) {
+					html += `
+					<div class="bg-opacity-10 relative select-none">
+						<div class="overflow-hidden">
+							<img src="${res[i].data[j].image}" class="hover:opacity-75 transform hover:scale-110 cursor-pointer overflow-hidden duration-500" >
+						</div>
+	               		<h1 class="title font-medium text-sm cursor-pointer">${res[i].data[j].title}</h1>
+	           		</div>`;
+				}
+
+				html += "</div></div>";
+			}
+
+			$("#content").html(html);
+		});
+	}
+</script>

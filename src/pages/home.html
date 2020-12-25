@@ -13,7 +13,7 @@
 <div class="home-page container w-11/12 m-auto h-auto">
 	<div id="slide"></div>
 	<div id="main" class="mt-2 flex">
-		<div class="left w-full md:w-4/5">
+		<div class="left w-full lg:w-4/5">
 			<div class="pt-10 lg:block hidden">
 				<h1 class="text-xl font-bold uppercase">Music for your life</h1>
 				<p class="text-base">Tận hưởng trải nghiệm nghe nhạc không quảng cáo, không cần kết nối mạng và nhiều lợi ích khác</p>
@@ -121,6 +121,10 @@
 				</div>
 			</div>
 		</div>
+		<div class="right hidden md:block w-1/5 p-4">
+			<div id="banner" class="space-y-4 mt-5 hidden lg:block"></div>
+			<div id="top-music" class="space-y-4 mt-5 hidden lg:block"></div>
+		</div>
 	</div>
 </div>
 
@@ -131,6 +135,20 @@
 	loadConnect();
 	loadNew();
 	loadMusic();
+	loadBanner();
+
+	function loadBanner() {
+		$.getJSON("/src/data/banner.json", function (data) {
+			let html = "";
+			for (let i = 0; i < data.length; i++) {
+				html += `
+	           <div class="bg-opacity-10 relative select-none w-full">
+	               <img class="w-full" src="${data[i]}" alt="" />
+	           </div>`;
+			}
+			$("#banner").html(html);
+		});
+	}
 
 	function loadSlide() {
 		$.ajax({
@@ -146,7 +164,7 @@
 			let html = "";
 			for (let i = 0; i < data.length; i++) {
 				html += `
-	           <div data-aos="fade-up" class="bg-opacity-10 relative select-none">
+	           <div class="bg-opacity-10 relative select-none">
 	               <div class="overflow-hidden">
 	                   <img src="${data[i].image}" class="hover:opacity-75 transform hover:scale-110 cursor-pointer overflow-hidden duration-500" >
 	               </div>
@@ -163,7 +181,7 @@
 			let html = "";
 			for (let i = 0; i < data.length; i++) {
 				html += `
-	           <div data-aos="fade-up" class="bg-opacity-10 relative select-none">
+	           <div class="bg-opacity-10 relative select-none">
 	               <div class="overflow-hidden">
 	                   <img src="${data[i].image}" class="hover:opacity-75 transform hover:scale-110 cursor-pointer overflow-hidden duration-500" >
 	               </div>
@@ -180,7 +198,7 @@
 			let html = "";
 			for (let i = 0; i < data.length; i++) {
 				html += `
-	           <div data-aos="fade-up" class="bg-opacity-10 relative select-none">
+	           <div class="bg-opacity-10 relative select-none">
 	               <div class="overflow-hidden">
 	                   <img src="${data[i].image}" class="hover:opacity-75 transform hover:scale-110 cursor-pointer overflow-hidden duration-500" >
 	               </div>
@@ -229,13 +247,14 @@
                         <h2 class="text-2xl font-bold" style="color:var(--text-secondary)">${i}</h2>
                     </div>
                     <div>
-                        <h3 class="title font-bold text-base cursor-pointer">CILU</h3>
-                        <h4 class="title cursor-pointer">JGKiD (Da LAB), MPaKK (Da LAB)</h4>	
+                        <h3 class="title font-bold text-base cursor-pointer">${data[i].name}</h3>
+                        <h4 class="title cursor-pointer">${data[i].singer}</h4>	
                     </div>
                 </div>`;
 			}
 
 			$("#music-list").html(html);
+			$("#top-music").html(html);
 		});
 	}
 
