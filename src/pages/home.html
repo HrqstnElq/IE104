@@ -220,9 +220,9 @@
                         <div class="w-full h-full absolute bg-black rounded-sm bg-opacity-60 top-0 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-around text-white">
                             <label class="select-none cursor-pointer">
                                 <input class="heart" type="checkbox" hidden/>
-                                <i class="far fa-heart "></i>
+                                <i class="far text-white fa-heart "></i>
                             </label> 
-                            <i class="fal fa-play-circle cursor-pointer text-3xl"></i>
+                            <i onclick="loadPlayList()" class="fal fa-play-circle cursor-pointer text-3xl"></i>
                             <i class="far fa-ellipsis-h"></i>
                         </div>
                     </div>		
@@ -244,10 +244,10 @@
 				html += `
                 <div class="flex p-4 hover:shadow-md transition-all duration-300 rounded-md cursor-pointer">
                     <div class="w-12">
-                        <h2 class="text-2xl font-bold" style="color:var(--text-secondary)">${i}</h2>
+                        <h2 class="text-2xl font-bold" style="color:var(--text-secondary)">${i + 1}</h2>
                     </div>
                     <div>
-                        <h3 class="title font-bold text-base cursor-pointer">${data[i].name}</h3>
+                        <h3 onclick="loadPlayList()" class="title font-bold text-base cursor-pointer">${data[i].name}</h3>
                         <h4 class="title cursor-pointer">${data[i].singer}</h4>	
                     </div>
                 </div>`;

@@ -1,5 +1,6 @@
-// loadHomePage();
-loadCasiPage();
+loadHomePage();
+// loadCasiPage();
+// loadBXHpage();
 function loadHomePage() {
 	$.ajax({
 		url: "./pages/home.html",
@@ -32,6 +33,15 @@ function loadCasiPage() {
 		url: "./pages/casi.html",
 		success: function (result) {
 			$("#body").html(result);
+		},
+	});
+}
+
+function loadPlayList() {
+	$.ajax({
+		url: "./components/playlist.html",
+		success: function (result) {
+			$("#playlist").html(result);
 		},
 	});
 }

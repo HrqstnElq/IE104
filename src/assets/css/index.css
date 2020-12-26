@@ -219,8 +219,56 @@ canvas {
 	background-position: 50% 50%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
 	.nav .nav--main .nav-item + .nav-item {
 		margin-left: 0;
 	}
+}
+
+@-webkit-keyframes xoayvong {
+	from {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+	}
+}
+
+#disc {
+	animation: xoayvong 4s linear 0s infinite;
+	-webkit-animation: xoayvong 4s linear 0s infinite;
+	-moz-animation: xoayvong 4s linear 0s infinite;
+	-o-animation: xoayvong 4s linear 0s infinite;
+}
+input[type="range"] {
+	pointer-events: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	width: 5px;
+	-webkit-appearance: none;
+	appearance: none;
+	height: 5px;
+	cursor: ew-resize;
+	background: #341f97;
+	box-shadow: -405px 0 0 400px #5f27cd;
+	border-radius: 50%;
+}
+
+#song {
+	opacity: 0;
+	overflow: hidden;
+	transition: all 0.3s ease-in;
+	visibility: hidden;
+}
+
+#playlist:hover #song {
+	display: block;
+	opacity: 1;
+	transition: all 0.3s ease-in;
+	visibility: visible;
 }
