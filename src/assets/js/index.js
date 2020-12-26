@@ -60,3 +60,24 @@ $("#toggle-dark-mode").click(() => {
 });
 
 ///slide show
+
+var islogin = window.localStorage.getItem("islogin");
+if (islogin) {
+	$("#islogin").html(`
+	<button id="avatar" class="relative">
+	<img
+		class="w-8 h-8 rounded-full object-cover object-top border border-purple-700"
+		src="https://i.pinimg.com/564x/04/b1/5e/04b15e2d481829682f8a4fd4316500d5.jpg"
+		alt=""
+	/>
+	<div class="menu absolute w-20 bg-white p-2 shadow-lg top-8 -left-6 rounded-md">
+		<p onclick="logout()" class="text-black font-bold">Đăng xuất</p>
+	</div>
+</button>
+	`);
+}
+
+function logout() {
+	window.localStorage.removeItem("islogin");
+	location.reload();
+}

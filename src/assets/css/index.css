@@ -219,12 +219,6 @@ canvas {
 	background-position: 50% 50%;
 }
 
-@media (max-width: 1024px) {
-	.nav .nav--main .nav-item + .nav-item {
-		margin-left: 0;
-	}
-}
-
 @-webkit-keyframes xoayvong {
 	from {
 		-webkit-transform: rotate(0deg);
@@ -271,4 +265,18 @@ input[type="range"]::-webkit-slider-thumb {
 	opacity: 1;
 	transition: all 0.3s ease-in;
 	visibility: visible;
+}
+
+#avatar .menu {
+	display: none;
+}
+
+#avatar:hover .menu {
+	display: block;
+}
+
+@media (max-width: 1024px) {
+	.nav .nav--main .nav-item + .nav-item {
+		margin-left: 0;
+	}
 }

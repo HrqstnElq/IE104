@@ -11,16 +11,15 @@
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Zing MP4 | Nghe tải nhạc chất lượng cao trên desktop, mobile & TV</title>
+		<!-- css lib -->
+		<link rel="stylesheet" href="./assets/lib/chartjs/Chart.min.css" />
+
 		<!-- custom css -->
 		<link rel="stylesheet" href="./assets/css/index.css" />
 		<link rel="stylesheet" href="./assets/css/common.css" />
 
-		<!-- css lib -->
-		<link rel="stylesheet" href="./assets/lib/chartjs/Chart.min.css" />
-
 		<!-- js lib -->
 		<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-		<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 		<script src="./assets/lib/chartjs/Chart.bundle.min.js"></script>
 	</head>
 	<body>
@@ -53,16 +52,18 @@
 						<li onclick="loadCasiPage()" id="nav-singer" class="nav-item py-2">
 							<a class="cursor-pointer">Theo ca sĩ</a>
 						</li>
-						<li id="nav-contact" class="nav-item py-2">
+						<li onclick="loadContacts()" id="nav-contact" class="nav-item py-2">
 							<a class="cursor-pointer">Liên hệ</a>
 						</li>
 						<li class="lg:ml-4">
-							<button class="btn-primary text-sm py-2 px-4 transition-colors duration-500 border rounded-xl lg:mr-2">
-								<a href="./pages/login.html">Đăng nhập</a>
-							</button>
-							<button class="btn-secondary py-2 text-sm px-4 border transition-colors duration-500 rounded-xl mt-4 lg:mt-0">
-								<a href="./pages/register.html">Đăng kí</a>
-							</button>
+							<div id="islogin">
+								<button class="btn-primary text-sm py-2 px-4 transition-colors duration-500 border rounded-xl lg:mr-2">
+									<a href="./login.html">Đăng nhập</a>
+								</button>
+								<button class="btn-secondary py-2 text-sm px-4 border transition-colors duration-500 rounded-xl mt-4 lg:mt-0">
+									<a href="./register.html">Đăng kí</a>
+								</button>
+							</div>
 						</li>
 
 						<div class="flex justify-center items-center ml-2 cursor-pointer mt-4 lg:mt-0">
@@ -128,7 +129,7 @@
 			</div>
 		</section>
 
-		<!-- library -->
+		<!-- js library -->
 		<script src="./assets/lib/jquery.min.js"></script>
 
 		<!-- custom js -->

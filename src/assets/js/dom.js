@@ -1,4 +1,5 @@
 loadHomePage();
+// loadContacts();
 // loadCasiPage();
 // loadBXHpage();
 function loadHomePage() {
@@ -31,6 +32,15 @@ function loadChudePage() {
 function loadCasiPage() {
 	$.ajax({
 		url: "./pages/casi.html",
+		success: function (result) {
+			$("#body").html(result);
+		},
+	});
+}
+
+function loadContacts() {
+	$.ajax({
+		url: "./pages/lienhe.html",
 		success: function (result) {
 			$("#body").html(result);
 		},
