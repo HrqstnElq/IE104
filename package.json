@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"start": "node app.js",
 		"build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/common.css",
 		"watch:css": "postcss src/assets/css/tailwind.css -o src/assets/css/common.css -w"
 	},
@@ -12,6 +13,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"autoprefixer": "^10.0.4",
+		"express": "^4.17.1",
 		"multiscroll.js": "^0.2.2",
 		"postcss": "^8.1.10",
 		"tailwindcss": "^2.0.1"
