@@ -96,9 +96,11 @@
 		$("#login-btn").click(() => {
 			var username = $("#username").val();
 			var password = $("#password").val();
-			if (username === "user" && password === "123456") {
+			if ((username === "user" && password === "123456") || window.localStorage.getItem(username) === password) {
 				window.localStorage.setItem("islogin", "true");
 				window.location.href = "./index.html";
+			} else {
+				alert("Tên tài khoản hoặc mật khẩu không đúng !");
 			}
 		});
 	</script>
