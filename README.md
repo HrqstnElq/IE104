@@ -1,8 +1,8 @@
 ### Hướng dẫn sử dụng 
 
-Clone repo tại : https://github.com/HrqstnElq/IE104
+Clone repo tại : https://github.com/VTV24/IE104
 
-> git clone https://github.com/HrqstnElq/IE104.git
+> git clone https://github.com/VTV24/IE104.git
 
 Cài đặt các pakage :
 
